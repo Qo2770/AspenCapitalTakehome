@@ -6,20 +6,26 @@ use std::collections::VecDeque;
 struct Card(u8);
 
 /// Play a game of War with two simulated parties
-pub fn play() -> String {
+pub fn play() -> &'static str {
     let mut deck = create_deck();
     let (mut player_1, mut player_2) = deal_cards(&mut deck);
 
+    // Infinite loop protection
+    let mut rounds = 0;
+
     // Play until one player is out of cards
-    while !player_1.is_empty() && !player_2.is_empty() {
+    while !player_1.is_empty() && !player_2.is_empty() && rounds < 10_000 {
         play_round(&mut player_1, &mut player_2);
+        rounds += 1;
     }
 
     // Return winner
     if player_1.is_empty() {
-        String::from("Player 2")
+        "Player 2"
+    } else if player_2.is_empty() {
+        "Player 1"
     } else {
-        String::from("Player 1")
+        "Draw!"
     }
 }
 
