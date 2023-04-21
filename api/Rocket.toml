@@ -1,0 +1,2 @@
+[default.databases.postgres_score]
+url = "postgres://postgres:mysecretpassword@localhost:5432/postgres"

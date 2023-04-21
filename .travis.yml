@@ -1,4 +1,4 @@
-before_install: cd api
+before_install: cd api && export DATABASE_URL=postgres://postgres:mysecretpassword@localhost:5432/postgres
 language: rust
 rust:
   - stable
