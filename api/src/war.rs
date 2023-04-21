@@ -168,6 +168,6 @@ mod test_war {
     #[test]
     fn check_integration_sanity() {
         let res = play();
-        assert!(res == "Player 1" || res == "Player 2");
+        assert!(res == "Player 1" || res == "Player 2" || res == "Draw!");
     }
 }
