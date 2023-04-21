@@ -1,6 +1,8 @@
 #[macro_use]
 extern crate rocket;
 
+pub mod war;
+
 #[get("/")]
 fn index() -> &'static str {
     "Hello, world!"
