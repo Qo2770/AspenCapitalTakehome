@@ -20,3 +20,5 @@ serving the endpoints and connecting to the database can be found in `main.rs`,
 while the game implementation rests in `war.rs`. The game functions are also
 thoroughly covered with unit testing. 
 
+Note: In order to avoid infinite loops, the program terminates games that
+exceed 10,000 rounds, which results in a draw.
