@@ -5,7 +5,7 @@ A simple RESTful API for simulating the card game War, built in Rust using Rocke
 
 ## Usage
 
-1. Ensure that you have ![Rust](https://www.rust-lang.org) and ![Docker](http://docker.com) installed.
+1. Ensure that you have [Rust](https://www.rust-lang.org) and [Docker](http://docker.com) installed.
 2. Run `docker run -p 5432:5432 --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres` in order to start a local Postgres database in Docker
 3. Enter the `api` folder and run `cargo install sqlx-cli --no-default-features --features rustls,postgres` to install the sqlx cli
 4. Run `sqlx migrate run --database-url postgres://postgres:mysecretpassword@localhost:5432/postgres` inside `api` to initialize the database

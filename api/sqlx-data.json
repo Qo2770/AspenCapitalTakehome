@@ -1,3 +1,67 @@
 {
-  "db": "PostgreSQL"
+  "db": "PostgreSQL",
+  "3e1af6916d4696007c9ec2c3d50d3b665f598392f8921a400180ae1afef493d2": {
+    "describe": {
+      "columns": [],
+      "nullable": [],
+      "parameters": {
+        "Left": []
+      }
+    },
+    "query": "insert into scoring values ('Player2', 0)"
+  },
+  "5c5e8ecce44e71fe0d0a5c67635398c4fb89a6048b6f81256e57c9f3f8c1c90e": {
+    "describe": {
+      "columns": [],
+      "nullable": [],
+      "parameters": {
+        "Left": []
+      }
+    },
+    "query": "insert into scoring values ('Player1', 0)"
+  },
+  "85798bd365fe6e6b32a0cfc7f7026bfffb56f4d8b507938e3d7ed12c65662878": {
+    "describe": {
+      "columns": [],
+      "nullable": [],
+      "parameters": {
+        "Left": []
+      }
+    },
+    "query": "update scoring set score = score+1 where player = 'Player1'"
+  },
+  "8c33747b4a787e1f11341cfb588beaba576783d57582e7e85a564a351cb7f1b8": {
+    "describe": {
+      "columns": [
+        {
+          "name": "player",
+          "ordinal": 0,
+          "type_info": "Varchar"
+        },
+        {
+          "name": "score",
+          "ordinal": 1,
+          "type_info": "Int8"
+        }
+      ],
+      "nullable": [
+        false,
+        false
+      ],
+      "parameters": {
+        "Left": []
+      }
+    },
+    "query": "select * from scoring"
+  },
+  "b8212d8dae3956b71c2b040a68db85ed6a1133e38deade07f97f11639a2d292f": {
+    "describe": {
+      "columns": [],
+      "nullable": [],
+      "parameters": {
+        "Left": []
+      }
+    },
+    "query": "update scoring set score = score+1 where player = 'Player2'"
+  }
 }
